@@ -70,7 +70,7 @@ if __name__ == "__main__":  # Test only the encoder part
 
     # LOOP
     STBY.on()  # enable motor driver
-    # Forwardly ramp up and down
+    # Forward ramp up and down
     for i in range(100):
         em.forward((i + 1) / 100)
         print(f"f, dc: {i}%, enc_cnt: {em.encoder_counts}")
@@ -79,7 +79,7 @@ if __name__ == "__main__":  # Test only the encoder part
         em.forward((i + 1) / 100)
         print(f"f, dc: {i}%, enc_cnt: {em.encoder_counts}")
         sleep(4 / 100)  # 4 seconds to ramp down
-    # Backwardly ramp up and down
+    # Backward ramp up and down
     for i in range(100):
         em.backward((i + 1) / 100)
         print(f"f, dc: {i}%, enc_cnt: {em.encoder_counts}")

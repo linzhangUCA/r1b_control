@@ -3,7 +3,7 @@ from machine import Timer
 
 
 class RegulatedWheel(SentientWheel):
-    def __init__(self, driver_ids, encoder_ids) -> None:
+    def __init__(self, driver_ids: list | tuple, encoder_ids: list | tuple) -> None:
         super().__init__(driver_ids, encoder_ids)
         # Constants
         self.k_p = 1.2
